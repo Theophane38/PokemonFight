@@ -53,11 +53,10 @@ Une animation est présente pour le changement de pokemon.
 ### A ajouter
 
 Cette application est loin d'être terminée, voici la liste des options à ajouter:
-
--Configurer toutes les attaques (Pour le moment seuls les attaques qui font des dégats sont initialisées)
--Gérer le changement de Pokemon lorsqu'un d'eux est KO
--Gérer la fin de combat (En cas de défaite ou d'abandon d'un des joueurs).
--Ajouter un système de classement et de ration.
--Ajouter des animations d'attaque.
--Ajouter les capacité spéciales des pokemons.
--Améliorer design principal.
+* Configurer toutes les attaques (Pour le moment seuls les attaques qui font des dégats sont initialisées)
+* Gérer le changement de Pokemon lorsqu'un d'eux est KO
+* Gérer la fin de combat (En cas de défaite ou d'abandon d'un des joueurs).
+* Ajouter un système de classement et de ration.
+* Ajouter des animations d'attaque.
+* Ajouter les capacité spéciales des pokemons.
+* Améliorer design principal.
