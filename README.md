@@ -12,7 +12,7 @@ Seuls les Pokemons de la première génération sont disponibles.
 L'application commence par une page de connexion simple sur laquelle l'utilisateur peut créer un compte ou se connecter.
 
 page de connexion
-![Capture-login](https://user-images.githubusercontent.com/32487884/63872173-a4a83600-c9bd-11e9-8293-8217ef0578fe.JPG)
+![Capture-login](https://user-images.githubusercontent.com/32487884/63873384-c7d3e500-c9bf-11e9-969c-6fb6e1d77ea7.JPG)
 
 
 ### Page d'accueil
