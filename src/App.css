@@ -1,0 +1,1481 @@
+.App {
+  font-family: 'Arial';
+  background-color: #888;
+  min-height: 100vh;
+}
+.App .clear {
+  clear: both;
+}
+.App .inactiveErrorMessage {
+  display: none;
+}
+.App .error {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+  display: block;
+}
+.App .inputError {
+  color: red !important;
+  border-color: red !important;
+}
+.App .green {
+  color: #35ED28;
+  font-weight: bold;
+}
+.App .red {
+  color: red;
+  font-weight: bold;
+}
+.pseudo {
+  color: #2f6eb5;
+  font-weight: bold;
+}
+.App header {
+  background-color: #333;
+}
+.App header ul {
+  padding: 0;
+  margin: 0;
+}
+.App header ul li {
+  list-style: none;
+  display: inline-block;
+}
+.App header ul li.logo {
+  padding: 10px;
+}
+.App header ul li.logo img {
+  width: 200px;
+}
+.App .connect_form {
+  width: 1000px;
+  margin: auto;
+}
+.App .connect_form h4 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.App .connect_form input {
+  width: 80%;
+  margin: auto;
+  display: block;
+  background-color: rgba(255,255,255,0);
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 20px;
+  color: white;
+}
+.App .connect_form input:focus{
+    outline: none;
+}
+.App .connect_form input::placeholder {
+  color: #aaa;
+}
+.App .connect_form button {
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  display: block;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  cursor: auto;
+}
+.App .connect_form button:focus{
+  outline: none;
+}
+.App .connect_form button.unlocked {
+  background-color: #ffcb05;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.App .connect_form button.unlocked:hover {
+  background-color: rgba(255,203,5, 0.9);
+  transition: 0.5s;
+}
+.App .connect_form button.locked {
+  background-color: #888;
+  transition: 0.5s;
+}
+.App .connect_form .login_form {
+  background-color: rgba(68,68,68,0.8);
+  margin-top: 100px;
+  padding: 20px;
+}
+.App .connect_form .signup_form {
+  background-color: rgba(68,68,68,0.8);
+  margin-top: 100px;
+  padding: 20px;
+}
+.App .lobby {
+  
+}
+.App .lobby table {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 1000px;
+  margin: auto;
+}
+.App .lobby table tr:first-child {
+  background-color: #21386e;
+  color: white;
+}
+.App .lobby table tr td {
+  padding: 10px;
+  text-align: center;
+}
+.App .lobby table tr td:last-child {
+  width: 150px;
+}
+.App .lobby table tr td button {
+  border: none;
+  background-color: #2f6eb5;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+.App .lobby table tr td button:focus {
+  outline: none;
+}
+.App .lobby table tr td button:hover {
+  outline: none;
+}
+.App .lobby table tr td button img {
+  width: 13px;
+  margin-right: 10px;
+}
+.modalReceiptDefy, .modalSendDefy, .modalResponseDefy, .modalOccupiedOpponent {
+  width: 400px;
+}
+.modalReceiptDefy p, .modalSendDefy p,.modalResponseDefy p, .modalOccupiedOpponent p {
+  font-size: 20px;
+  text-align: center;
+}
+.modalReceiptDefy button,  .modalSendDefy button, .modalResponseDefy button, .modalOccupiedOpponent button {
+  background-color: #2f6eb5;
+  color: #fff;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+.modalReceiptDefy button.buttonAccept {
+  float: right;
+}
+.modalReceiptDefy button.buttonRefuse {
+  float: left;
+}
+.modalSendDefy button.buttonCancel {
+  float: right;
+}
+.modalResponseDefy button.buttonOk {
+  float: right;
+}
+.modalOccupiedOpponent button.buttonOk {
+  float: right;
+}
+.screen {
+  width: 500px;
+  height: 300px;
+  border: 1px solid grey;
+  margin: auto;
+  background: url('./images/backgound-fight.png');
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.screen .pokeballChange {
+  position: absolute;
+  display: none;
+  width: 20px;
+  animation-name: pokeballChange;
+  animation-duration: 0.5s;
+  margin-left: 106px;
+  margin-top: 204px;
+
+}
+.screen .pokeballChange.block {
+  display: block;
+}
+.screen .pokeballChange.none {
+  display: none;
+}
+@keyframes pokeballChange {
+  0% {
+    margin-left: -20px;
+      margin-top: 204px;
+      transform: rotate(0deg);
+  }
+    25% {
+      margin-left: 15px;
+      margin-top: 168px;
+    }
+    50% {
+    margin-left: 53px;
+      margin-top: 138px;
+    }
+    75% {
+    margin-left: 73px;
+      margin-top: 168px;
+    }
+    100% {
+      margin-left: 106px;
+      margin-top: 204px;
+      transform: rotate(1440deg);
+    }
+}
+.screen .enemyTeam {
+  height: 150px;
+}
+.screen .enemyTeam .pokeballsTrainer {
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  width: 10000px;
+  display: none;
+}
+.screen .enemyTeam .pokeballsTrainer .pokeballTrainer {
+  width: 20px;
+  display: inline-block;
+  margin: 0;
+  float: none;
+  margin-left: 5px;
+}
+.screen .enemyTeam .pokeballsTrainer.come {
+  display: block;
+}
+.screen .enemyTeam .pokeballsTrainer.come .pokeballTrainer {
+  animation-name: enemyPokeballsCome;
+  animation-duration: 1s;
+}
+.screen .enemyTeam .pokeballsTrainer.leave {
+  display: block;
+}
+.screen .enemyTeam .pokeballsTrainer.leave .pokeballTrainer {
+  animation-name: enemyPokeballsLeave;
+  animation-duration: 1s;
+}
+@keyframes enemyPokeballsCome  {
+  0% {
+    margin-left: 500px;
+  }
+  100% {
+    margin-left: 5px;
+  }
+}
+@keyframes enemyPokeballsLeave  {
+  0% {
+    margin-left: 5px;
+  }
+  100% {
+    margin-left: -200px;
+  }
+}
+
+
+
+.screen .enemyTeam .platform {
+  position: absolute;
+  right: 0;
+  margin-right: 0;
+  top: 81px;
+  animation-name: enemyPlatform;
+  animation-duration: 3s;
+  display: none;
+}
+.screen .enemyTeam .platform.come {
+  display: block;
+}
+@keyframes enemyPlatform {
+  0% {
+    right: 500px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+
+.screen .enemyTeam .trainer {
+  height: 115px;
+  position: absolute;
+  right: 80px;
+  margin-right: 0;
+  top: 12px;
+  display: none;
+  animation-timing-function: linear;
+}
+.screen .enemyTeam .trainer.come {
+  right: 80px;
+  animation: enemyTrainerCome 3s;
+  display: block;
+}
+.screen .enemyTeam .trainer.leave {
+  right: -200px;
+  animation: enemyTrainerLeave 1s;
+  display: block;
+}
+@keyframes enemyTrainerCome {
+  0% {
+    right: 580px;
+  }
+  100% {
+    right: 80px;
+  }
+}
+@keyframes enemyTrainerLeave {
+  0% {
+    right: 80px;
+  }
+  100% {
+    right: -200px;
+  }
+}
+
+.screen .enemyTeam .pokeballPokemon {
+  width: 21px;
+  position: absolute;
+  display: block;
+  right: 39px;
+  top: 105px;
+  display: none;
+}
+.screen .enemyTeam .pokeballPokemon.block {
+  display: block;
+}
+
+
+.screen .enemyTeam .pokemon {
+  width: 130px;
+  position: absolute;
+  right: 75px;
+  margin-right: 0;
+  top: 18px;
+  display: none;
+}
+.screen .enemyTeam .pokemon.come {
+  animation-name: enemyPokemonCome;
+  animation-duration: 1s;
+  display: block;
+}
+.screen .enemyTeam .pokemon.leave {
+  display: block;
+  animation-name: enemyPokemonLeave;
+  animation-duration: 1s;
+}
+@keyframes enemyPokemonCome  {
+  0% {
+    width: 0;
+    top: 148px;
+    right: 140px;
+  }
+  100% {
+    width: 130px;
+    top: 18px;
+    right: 75px;
+  }
+}
+@keyframes enemyPokemonLeave {
+  0% {
+    top: 18px;
+  }
+  100% {
+    top: 200px;
+  }
+}
+
+
+.screen .enemyTeam .pokemonInfos {
+  position: absolute;
+  top: 31px;
+  width: 186px;
+  color: #fff;
+  border: 2px solid #000;
+  border-left: none;
+  background-color: #444;
+  border-radius: 0 10px 10px 0;
+  display: none;
+}
+.screen .enemyTeam .pokemonInfos.come {
+  animation-name: enemyPokemonInfosCome;
+  animation-duration: 0.5s;
+  display: block;
+}
+.screen .enemyTeam .pokemonInfos.leave {
+  animation-name: enemyPokemonInfosLeave;
+  animation-duration: 0.5s;
+  display: block;
+}
+.screen .enemyTeam .pokemonInfos p {
+  display: inline-block;
+  margin: 0;
+}
+.screen .enemyTeam .pokemonInfos .pokemonName {
+  width: 145px;
+  margin-left: 5px;
+}
+.screen .enemyTeam .pokemonInfos .hpLine {
+  height: 9px;
+  border-radius: 0 0 14px 8px;
+  width: 200px;
+  margin-top: 5px;
+  background-color: #222;
+  margin-bottom: 5px;
+}
+.screen .enemyTeam .pokemonInfos .hp {
+  top: 24px;
+  position: absolute;
+  left: 74px;
+  font-size: 9px;
+}
+.screen .enemyTeam .pokemonInfos progress {
+  position: absolute;
+  left: 86px;
+  top: 26px;
+  height: 8px;
+  width: 90px;
+  border: 1px solid #fff;
+}
+@keyframes enemyPokemonInfosCome  {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes enemyPokemonInfosLeave {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: -200px;
+  }
+}
+
+
+.screen .shadow {
+  position: absolute;
+  width: 84px;
+  height: 21px;
+  border-radius: 162px / 47px;
+  background-color: rgba(0,0,0,0.3);
+  right: 98px;
+  top: 110px;
+  display: none;
+}
+.screen .shadow.block {
+  display: block;
+}
+
+
+
+
+.screen .friendTeam {
+  height: 60px;
+  position: relative;
+}
+.screen .friendTeam .platform {
+  margin: 0;
+  position: absolute;
+  bottom: -58px;
+  width: 300px;
+  left: 0px;
+  display: none;
+}
+.screen .friendTeam .platform.come {
+  animation-name: friendPlatformCome;
+  animation-duration: 10s;
+  display: block;
+}
+@keyframes friendPlatformCome {
+  0% {
+    left: 500px;
+  }
+  30% {
+    left: 0px;
+  }
+}
+
+
+.screen .friendTeam .trainer {
+  position: absolute;
+  margin: 0;
+  width: 158px;
+  bottom: -62px;
+  left: 85px;
+  display: none;
+}
+.screen .friendTeam .trainer.come {
+  animation-name: friendTrainerCome;
+  animation-duration: 3s;
+  display: block;
+}
+.screen .friendTeam .trainer.leave {
+  animation-name: friendTrainerLeave;
+  animation-duration: 1s;
+  display: block;
+}
+@keyframes friendTrainerCome {
+  0% {
+    left: 585px;
+  }
+  100% {
+    left: 85px;
+  }
+}
+@keyframes friendTrainerLeave {
+  0% {
+    left: 85px;
+  }
+  100% {
+    left: -285px;
+  }
+}
+
+.screen .friendTeam .pokeballPokemon {
+  width: 21px;
+  position: absolute;
+  display: block;
+  top: 14px;
+  left: -21px;
+}
+.screen .friendTeam .pokeballPokemon.come {
+  animation-name: friendPokeballChange;
+  animation-duration: 1s;
+}
+@keyframes friendPokeballChange {
+  0% {
+    left: -21px;
+    top: 24px;
+    transform: rotate(0deg);
+  }
+  12% {
+    left: 30px;
+    top: -15px;
+  }
+  25% {
+    left: 70px;
+    top: -15px;
+  }
+  37% {
+    left: 110px;
+    top: 2px;
+  }
+  50% {
+    left: 125px;
+    top: 24px;
+  }
+  75% {
+    left: 140px;
+    top: 46px;
+  }
+  100% {
+    top: 65px;
+    left: 140px;
+    transform: rotate(1440deg);
+  }
+}
+
+
+.screen .friendTeam .pokemon {
+  position: absolute;
+  margin: 0;
+  width: 158px;
+  left: 85px;
+  bottom: -62px;
+  display: none;
+}
+.screen .friendTeam .pokemon.normal {
+  display: block;
+}
+.screen .friendTeam .pokemon.come {
+  animation-name: friendPokemonCome;
+  animation-duration: 1s;
+  display: block;
+}
+.screen .friendTeam .pokemon.leave {
+  animation-name: friendPokemonLeave;
+  animation-duration: 1s;
+  display: block;
+}
+.screen .friendTeam .pokemon.attack {
+  animation-name: friendPokemonAttack;
+  animation-duration: 1s;
+  display: block;
+}
+@keyframes friendPokemonCome {
+  0% {
+    width: 0;
+    left: 166px;
+  }
+  100% {
+    width: 158px;
+    left: 85px;
+  }
+}
+@keyframes friendPokemonLeave {
+  0% {
+    bottom: -62px;
+  }
+  100% {
+    bottom: -262px;
+  }
+}
+@keyframes friendPokemonAttack {
+  0% {
+    bottom: -42px;
+    left: 105px;
+  }
+  100% {
+    bottom: -62px;
+    left: 85px;
+  }
+}
+
+
+.screen .friendTeam .pokemonInfos {
+  position: absolute;
+  top: -6px;
+  right: 0;
+  width: 200px;
+  color: #fff;
+  border: 2px solid #000;
+  border-right: none;
+  background-color: #444;
+  border-radius: 10px 0 0 10px;
+  display: none;
+}
+.screen .friendTeam .pokemonInfos.come {
+  animation-name: friendPokemonInfosCome;
+  animation-duration: 0.5s;
+  display: block;
+}
+.screen .friendTeam .pokemonInfos.leave {
+  animation-name: friendPokemonInfosLeave;
+  animation-duration: 0.5s;
+  display: block;
+}
+.screen .friendTeam .pokemonInfos p {
+  display: inline-block;
+  margin: 0;
+}
+.screen .friendTeam .pokemonInfos .pokemonName {
+  width: 145px;
+  margin-left: 5px;
+}
+.screen .friendTeam .pokemonInfos .hpLine {
+  height: 9px;
+  border-radius: 0px 0 0 14px;
+  width: 215px;
+  margin-top: 5px;
+  margin-left: -17px;
+  background-color: #222;
+}
+.screen .friendTeam .pokemonInfos .hp {
+  top: 24px;
+  position: absolute;
+  left: 78px;
+  font-size: 9px;
+}
+.screen .friendTeam .pokemonInfos progress {
+  position: absolute;
+  left: 90px;
+  top: 26px;
+  height: 8px;
+  width: 90px;
+  border: 1px solid #fff;
+}
+.screen .friendTeam .pokemonInfos .hpValue {
+  color: #fff;
+  font-size: 17px;
+  font-family: fantasy;
+  letter-spacing: 1px;
+  display: block;
+  text-align: right;
+  margin-right: 16px;
+}
+.screen .friendTeam .pokemonInfos .statusPokemon {
+  display: block;
+  position: absolute;
+  font-size: 11px;
+  padding: 0 10px;
+  top: 38px;
+  left: 6px;
+  border-radius: 10px;
+}
+.screen .friendTeam .pokemonInfos .statusPokemon.paralyzed {
+  background-color: #f8d030;
+}
+.screen .friendTeam .pokemonInfos .statusPokemon.burnt {
+  background-color: #f08030;
+}
+.screen .friendTeam .pokemonInfos .statusPokemon.frozen {
+  background-color: #98d8d8;
+}
+.screen .friendTeam .pokemonInfos .statusPokemon.poisoned {
+  background-color: #a040a0;
+}
+.screen .friendTeam .pokemonInfos .statusPokemon.sleeping {
+  background-color: #705848;
+}
+@keyframes friendPokemonInfosCome {
+  0% {
+    right: -300px;
+  }
+  100% {
+    right: 0;
+  }
+}
+@keyframes friendPokemonInfosLeave {
+  0% {
+    right: 0px;
+  }
+  100% {
+    right: -300px;
+  }
+}
+
+
+
+@keyframes friendPokeballCome  {
+  0% {
+    margin-right: 500px;
+  }
+  100% {
+    margin-right: 5px;
+  }
+}
+@keyframes friendPokeballsCome {
+  0% {
+    width: 3500px;
+  }
+  100% {
+    width: 150px;
+  }
+}
+@keyframes friendPokeballsLeave {
+  0% {
+    right: 30px;
+  }
+  100% {
+    right: -230px;
+  }
+}
+.screen .friendTeam .pokeballsTrainer {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  display: none;
+}
+.screen .friendTeam .pokeballsTrainer.come {
+  animation-name: friendPokeballsCome;
+  animation-duration: 1s;
+  display: block;
+}
+.screen .friendTeam .pokeballsTrainer.leave {
+  animation-name: friendPokeballsLeave;
+  animation-duration: 1s;
+  display: block;
+}
+.screen .friendTeam .pokeballsTrainer .pokeballTrainer {
+  width: 20px;
+  display: inline-block;
+  margin: 0;
+  float: none;
+  margin-right: 5px;
+}
+.screen .friendTeam .pokeballsTrainer.come .pokeballTrainer {
+  animation-name: friendPokeballCome;
+  animation-duration: 1s;
+}
+.screen .dialog {
+  height: 80px;
+  position: absolute;
+  width: 492px;
+  background-color: #fff;
+  border: 5px double #000;
+  margin: 3px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+.actionScreen {
+  position: relative;
+  overflow: hidden;
+  background: rgba(32,61,227,1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(32,61,227,1) 0%, rgba(10,38,69,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(32,61,227,1)), color-stop(100%, rgba(10,38,69,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(32,61,227,1) 0%, rgba(10,38,69,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(32,61,227,1) 0%, rgba(10,38,69,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(32,61,227,1) 0%, rgba(10,38,69,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(32,61,227,1) 0%, rgba(10,38,69,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#203de3', endColorstr='#0a2645', GradientType=1 );
+  background-size: cover;
+  width: 500px;
+  height: 300px;
+  border: 1px solid grey;
+  margin: auto;
+  margin-top: 20px;
+}
+.actionScreen .pokeballsTrainer {
+  position: absolute;
+  left: 0;
+  padding: 5px;
+}
+.actionScreen .pokeballsOpponentTrainer {
+  position: absolute;
+  right: 0;
+  padding: 5px;
+}
+.actionScreen .pokeballsTrainer .pokeballTrainer {
+  width: 20px;
+}
+.actionScreen .pokeballsOpponentTrainer .pokeballTrainer {
+  width: 20px;
+}
+.actionScreen .action {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font: 14px/100% Arial, Helvetica, sans-serif;
+  padding: .5em 2em .55em;
+  text-shadow: 0 1px 1px rgba(0,0,0,.3);
+  -webkit-border-radius: .5em; 
+  -moz-border-radius: .5em;
+  border-radius: .5em;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  width: 30%;
+  margin-left: 2.5%;
+  vertical-align: top;
+}
+.actionScreen .action.moves {
+  color: #faddde;
+  border: solid 1px #980c10;
+  background: #d81b21;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ed1c24), to(#aa1317));
+  background: -moz-linear-gradient(top, #ed1c24, #aa1317);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ed1c24', endColorstr='#aa1317');
+  padding: 50px;
+  width: 300px;
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+  font-size: 20px;
+}
+.actionScreen .action.moves:hover {
+  background: #b61318;
+  background: -webkit-gradient(linear, left top, left bottom, from(#c9151b), to(#a11115));
+}
+.actionScreen .action.moves:active {
+  color: #de898c;
+  background: -webkit-gradient(linear, left top, left bottom, from(#aa1317), to(#ed1c24));
+}
+.actionScreen .action.pack {
+  color: #fef4e9;
+  border: solid 1px #da7c0c;
+  background: #f78d1d;
+  background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+  background: -moz-linear-gradient(top, #faa51a, #f47a20);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+  padding: 30px 0;
+  margin-top: 30px;
+}
+.actionScreen .action.pack:hover {
+  background: #f47c20;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+  background: -moz-linear-gradient(top, #f88e11, #f06015);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+}
+.actionScreen .action.pack:active {
+  color: #fcd3a5;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
+  background: -moz-linear-gradient(top, #f47a20, #faa51a);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f47a20', endColorstr='#faa51a');
+}
+.actionScreen .action.pokemons {
+  color: #e8f0de;
+  border: solid 1px #538312;
+  background: #64991e;
+  background: -webkit-gradient(linear, left top, left bottom, from(#7db72f), to(#4e7d0e));
+  background: -moz-linear-gradient(top, #7db72f, #4e7d0e);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7db72f', endColorstr='#4e7d0e');
+  padding: 30px 0;
+  margin-top: 30px;
+}
+.actionScreen .action.pokemons:hover {
+  background: #538018;
+  background: -webkit-gradient(linear, left top, left bottom, from(#6b9d28), to(#436b0c));
+  background: -moz-linear-gradient(top, #6b9d28, #436b0c);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6b9d28', endColorstr='#436b0c');
+}
+.actionScreen .action.pokemons:active {
+  color: #a9c08c;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4e7d0e), to(#7db72f));
+  background: -moz-linear-gradient(top, #4e7d0e, #7db72f);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4e7d0e', endColorstr='#7db72f');
+}
+.actionScreen .action.run {
+  color: #d9eef7;
+  border: solid 1px #0076a3;
+  background: #0095cd;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+  background: -moz-linear-gradient(top, #00adee, #0078a5);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+  padding: 30px 0;
+  margin-top: 60px;
+}
+.actionScreen .action.run:hover {
+  background: #007ead;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+  background: -moz-linear-gradient(top, #0095cc, #00678e);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0095cc', endColorstr='#00678e');
+}
+
+.actionScreen .action.run:active {
+  color: #80bed6;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0078a5), to(#00adee));
+  background: -moz-linear-gradient(top, #0078a5, #00adee);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0078a5', endColorstr='#00adee');
+}
+.actionScreen .action p {
+  margin: 0;
+  font-size: 15px;
+}
+.actionScreen .move {
+  width: 45%;
+  margin-left: 2.5%;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px;
+  text-shadow: 0 1px 1px rgba(0,0,0,.3);
+  border-size: 2px;
+  text-align: center;
+  border-style: solid;
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  background-color: rgba(255,255,255,0.7);
+  color: #444;
+  cursor: pointer;
+}
+.actionScreen .move:nth-child(1), .actionScreen .move:nth-child(2) {
+  margin-top: 70px;
+}
+.actionScreen .move:nth-child(3), .actionScreen .move:nth-child(4) {
+  margin-top: 15px;
+}
+.actionScreen .move .moveName {
+  font-size: 18px;
+}
+.actionScreen .move .type {
+  margin: 0;
+  width: 50px;
+  display: inline-block;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 10px;
+}
+.actionScreen .move .pp {
+  display: inline-flex;
+  font-size: 13px;
+  margin-left: 94px;
+}
+.actionScreen .cancelMove {
+  color: #d9eef7;
+  border: solid 1px #0076a3;
+  background: #0095cd;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+  background: -moz-linear-gradient(top, #00adee, #0078a5);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+  padding: 30px 0;
+  margin-top: 60px;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font: 14px/100% Arial, Helvetica, sans-serif;
+  padding: .5em 2em .55em;
+  text-shadow: 0 1px 1px rgba(0,0,0,.3);
+  -webkit-border-radius: .5em; 
+  -moz-border-radius: .5em;
+  border-radius: .5em;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  width: 30%;
+  margin: auto;
+  vertical-align: top;
+  padding: 30px 0;
+  margin-top: 20px;
+}
+.actionScreen .cancelMove:hover {
+  background: #007ead;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+  background: -moz-linear-gradient(top, #0095cc, #00678e);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0095cc', endColorstr='#00678e');
+}
+.actionScreen .cancelMove:active {
+  color: #80bed6;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0078a5), to(#00adee));
+  background: -moz-linear-gradient(top, #0078a5, #00adee);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0078a5', endColorstr='#00adee');
+}
+.actionScreen .pokemon {
+  background-color: rgba(255,255,255,0.2);
+  border: 2px solid #999;
+  border-radius: 10px;
+  margin: 0;
+  width: 45%;
+  margin-left: 3.3%;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.actionScreen .pokemon:nth-child(1), .actionScreen .pokemon:nth-child(2) {
+  margin-top: 20px;
+}
+.actionScreen .pokemon p {
+  margin: 0;
+}
+.actionScreen .pokemon .pokemonImage {
+  margin: 0;
+  width: 40px;
+  display: inline-block;
+  vertical-align: top;
+}
+.actionScreen .pokemon .pokemonNameHpLine {
+  display: inline-block;
+  width: 170px;
+}
+.actionScreen .pokemon .pokemonName {
+  color: #fff;
+  font-size: 15px;
+  line-height: 15px;
+  margin-top: 5px;
+}
+.actionScreen .pokemon .pokemonHpLine {
+  text-align: right;
+}
+.actionScreen .pokemon .pokemonHpLine .hp {
+  display: inline-block;
+  color: #fff;
+  font-size: 10px;
+}
+.actionScreen .pokemon .pokemonHpLine .green {
+      display: inline-block;
+    border: 1px solid #fff;
+    width: 156px;
+    height: 7px;
+}
+.actionScreen .pokemon .pokemonLevel {
+  display: inline-block;
+  color: #fff;
+  margin-left: 10px;
+}
+.actionScreen .pokemon .pokemonHpValue {
+  display: inline-block;
+  width: 170px;
+  margin-right: 10px;
+  text-align: right;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+.screen .enemyTeam {
+  height: 150px;
+}
+.screen .infosCadreEnemy {
+  width: 150px;
+  background-color: white;
+  padding: 5px;
+  border: 1px solid #ccc;
+  margin-top: 30px;
+  float: left;
+}
+.screen .infosCadreEnemy p, .screen .infosCadreFriend p {
+  margin: 0;
+}
+.screen .infosCadreEnemy p span:first-child, .screen .infosCadreFriend p span:first-child {
+  float: left;
+}
+.screen .infosCadreEnemy p span:last-child, .screen .infosCadreFriend p span:last-child {
+  float: right;
+}
+.screen .infosCadreEnemy progress, .screen .infosCadreFriend progress {
+  margin-top: 2px;
+  margin-left: 73px;
+}
+.screen .infosCadreFriend {
+  width: 150px;
+  background-color: white;
+  padding: 5px;
+  border: 1px solid #ccc;
+  margin-top: 30px;
+  float: right;
+}
+.screen .enemyTeam img {
+  float: right;
+    margin-right: 90px;
+    vertical-align: top;
+    margin-top: 50px;
+    margin-top: 0;
+}
+.screen .friendTeam img.none {
+  display: none;
+}
+.screen .friendTeam img.block {
+  display: inline-block;
+}
+@keyframes pokemonChange {
+  0% {
+    width: 0px;
+    margin-left: 118px;
+    margin-top: 96px;
+  }
+    100% {
+      width: 96px;
+      margin-left: 70px;
+      margin-top: 0;
+    }
+}
+.actionScreen {
+  width: 500px;
+  height: 300px;
+  border: 1px solid grey;
+  margin: auto;
+  background-color: #eee;
+  margin-top: 20px;
+}
+.actionScreen .texteAction {
+  width: 450px;
+  background-color: #fff;
+  margin: 10px 10px 13px 10px;
+  padding: 15px 10px;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+  border-left: 5px solid #444;
+  border-right: 5px solid #444;
+  border-radius: 5px;
+}
+.attackScreen {
+  width: 500px;
+  height: 300px;
+  border: 1px solid grey;
+  margin: auto;
+  background-color: #eee;
+  margin-top: 20px;
+}
+.attackScreen .texteAction {
+  width: 450px;
+  background-color: #fff;
+  margin: 10px 10px 13px 10px;
+  padding: 15px 10px;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+  border-left: 5px solid #444;
+  border-right: 5px solid #444;
+  border-radius: 5px;
+}
+.attackScreen div {
+  border: 1px solid #444;
+  text-align: center;
+  width: 212px;
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 10px;
+  border-width: 3px;
+  border-style: solid;
+  background-color: #fff;
+  color: #444;
+}
+.attackScreen div:hover {
+  background-color: #eee;
+  transition: 0.5s;
+}
+.attackScreen div p:nth-child(1) {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+.attackScreen div p:nth-child(2) {
+  margin: 0;
+  font-size: 12px;
+  text-align: right;
+  margin-right: 5px;
+}
+.attackScreen div:nth-child(2), .attackScreen div:nth-child(4) {
+  margin: 20px 10px 20px 20px;
+}
+.attackScreen div:nth-child(3), .attackScreen div:nth-child(5) {
+  margin: 20px 20px 20px 10px;
+}
+.attackScreen .cancel {
+  margin: auto;
+  display: block;
+  background-color: rgba(38,147,204,0.7);
+  border-radius: 5px 5px 0 0;
+  border-width: 1px;
+  border-bottom: none;
+  padding-bottom: 6px;
+  color: white;
+}
+.attackScreen .cancel:hover {
+  background-color: rgba(38,147,204,1);
+}
+.pokemonScreen {
+  width: 500px;
+  height: 300px;
+  border: 1px solid grey;
+  margin: auto;
+  background-color: #eee;
+  margin-top: 20px;
+}
+.pokemonScreen .texteAction {
+  width: 450px;
+  background-color: #fff;
+  margin: 10px 10px 10px 10px;
+  padding: 15px 10px;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+  border-left: 5px solid #444;
+  border-right: 5px solid #444;
+  border-radius: 5px;
+}
+.pokemonScreen div {
+  border: 1px solid #444;
+  text-align: center;
+  width: 212px;
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 10px;
+  border-width: 3px;
+  border-style: solid;
+  background-color: #fff;
+  color: #444;
+  height: 50px;
+}
+.pokemonScreen div:hover {
+  background-color: #eee;
+  transition: 0.5s;
+}
+.pokemonScreen div img {
+    width: 40px;
+    display: inline-block;
+}
+.pokemonScreen div p {
+    display: inline-block;
+    vertical-align: top;
+    width: 162px;
+    text-align: left;
+    margin: 0;
+}
+.pokemonScreen div p:nth-child(3){
+    margin: 0;
+    display: inline-block;
+    background-color: #444;
+    color: orange;
+    line-height: 1.2;
+    font-size: 8px;
+    vertical-align: top;
+    width: 14px;
+    text-align: center;
+    margin-left: 82px;
+    margin-top: -10px;
+}
+.pokemonScreen div progress {
+    height: 9px;
+    width: 99px;
+    display: block;
+    background-color: white;
+    border-radius: 10px;
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #444;
+    border-radius: 0;
+    margin-top: -10px;
+}
+.pokemonScreen div:nth-child(3), .pokemonScreen div:nth-child(5), .pokemonScreen div:nth-child(7) {
+  margin: 0 20px 0 10px;
+}
+.pokemonScreen div:nth-child(2), .pokemonScreen div:nth-child(4), .pokemonScreen div:nth-child(6) {
+  margin: 0 10px 0 20px;
+}
+.pokemonScreen .cancel {
+  margin: auto;
+  display: block;
+  background-color: rgba(38,147,204,0.7);
+  border-radius: 5px 5px 0 0;
+  border-width: 1px;
+  border-bottom: none;
+  padding-bottom: 6px;
+  color: white;
+  height: 38px;
+  text-align: center;
+  padding-top: 10px;
+}
+.pokemonScreen .cancel:hover {
+  background-color: rgba(38,147,204,1);
+}
+.pokemonScreen .cancel p {
+  text-align: center;
+}
+.pokemon {
+  display: inline-block;
+  width: 200px;
+  margin-right: 25px;
+}
+.pokemon img {
+  width: 100px;
+  margin: 0 50px;
+}
+progress {
+  height: 5px;
+  width: 70px;
+  display: block;
+  background-color: white;
+  border-radius: 10px;
+}
+/* .type {
+  color: white;
+  display: inline-block;
+  font-size: 12px;
+  padding-left: 5%;
+  border-radius: 10px;
+} */
+
+/* TYPES POKEMONS */
+.type.dragon {
+  background-color: #7038f8;
+}
+.type.fire {
+  background-color: #f08030;
+}
+.type.water {
+  background-color: #6890f0;
+}
+.type.normal {
+  background-color: #a8a878;
+}
+.type.grass {
+  background-color: #78c850;
+}
+.type.ice {
+  background-color: #98d8d8;
+}
+.type.poison {
+  background-color: #a040a0;
+}
+.type.psychic {
+  background-color: #f85888;
+}
+.type.bug {
+  background-color: #a8b820;
+}
+.type.ground {
+  background-color: #e0c068;
+}
+.type.flying {
+  background-color: #a890f0;
+}
+.type.electric {
+  background-color: #f8d030;
+}
+.type.rock {
+  background-color: #b8a038;
+}
+.type.fighting {
+  background-color: #c03028;
+}
+.type.dark {
+  background-color: #705848;
+}
+.type.steel {
+  background-color: #b8b8d0;
+}
+.type.ghost {
+  background-color: #705898;
+}
+.move p {
+  margin: 0;
+}
+.move .ppMove {
+  text-align: right;
+  font-size: 12px;
+}
+/* TYPES MOVES */
+.move.dragon {
+  border-color: #7038f8;
+}
+.move.fire {
+  border-color: #f08030;
+}
+.move.water {
+  border-color: #6890f0;
+}
+.move.normal {
+  border-color: #a8a878;
+}
+.move.grass {
+  border-color: #78c850;
+}
+.move.ice {
+  border-color: #98d8d8;
+}
+.move.poison {
+  border-color: #a040a0;
+}
+.move.psychic {
+  border-color: #f85888;
+}
+.move.bug {
+  border-color: #a8b820;
+}
+.move.ground {
+  border-color: #e0c068;
+}
+.move.flying {
+  border-color: #a890f0;
+}
+.move.electric {
+  border-color: #f8d030;
+}
+.move.rock {
+  border-color: #b8a038;
+}
+.move.fighting {
+  border-color: #c03028;
+}
+.move.tenebre {
+  border-color: #705848;
+}
+.move.acier {
+  border-color: #b8b8d0;
+}
+.move.spectre {
+  border-color: #705898;
+}
+
+progress.green::-webkit-progress-value {
+  background-color: green;
+}
+progress.orange::-webkit-progress-value {
+  background-color: orange;
+}
+progress.red::-webkit-progress-value {
+  background-color: red;
+}
+progress::-webkit-progress-bar {
+  background-color: #aaa;
+}
