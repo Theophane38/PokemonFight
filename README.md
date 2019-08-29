@@ -49,6 +49,7 @@ Attente
 ![Capture-attente](https://user-images.githubusercontent.com/32487884/63872975-ff8e5d00-c9be-11e9-95cc-de358ea67abd.JPG)
 
 Une animation est présente pour le changement de pokemon.
+![React-App-Google-Chrome-28_08_2019-18_19_26_Trim-_online-video-cutter com_](https://user-images.githubusercontent.com/32487884/63922569-3909ab80-ca45-11e9-9cb8-5e59dc2580fc.gif)
 
 ### A ajouter
 
