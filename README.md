@@ -34,6 +34,9 @@ Joueur défié
 
 Si le joueur défié accpete le combat, ce dernier commence avec une animation en CSS
 
+Animation de début
+![React-App-Google-Chrome-29_08_2019-11_17_29-_online-video-cutter com_](https://user-images.githubusercontent.com/32487884/63928112-53e11d80-ca4f-11e9-959f-67fdba5134b0.gif)
+
 Chacun des joueurs devra choisir une action à effetcuer (Attaquer ou changer de Pokemon) puis attendre que l'autre joueur face de même.
 
 Choix de l'action
