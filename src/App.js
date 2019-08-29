@@ -4,7 +4,6 @@ import pokeball from './images/pokeball.png';
 import './App.css';
 import openSocket from 'socket.io-client';
 import Modal from 'react-responsive-modal';
-import Fight from './components/fight';
 
 class App extends Component {
 
@@ -181,7 +180,7 @@ class App extends Component {
             });
         }
         .bind(that),
-        300
+        3000
       );
       setTimeout(
         function() {
@@ -193,7 +192,7 @@ class App extends Component {
             });
         }
         .bind(that),
-        500
+        5000
       );
       setTimeout(
         function() {
@@ -207,7 +206,7 @@ class App extends Component {
             });
         }
         .bind(that),
-        600
+        6000
       );
       setTimeout(
         function() {
@@ -219,7 +218,7 @@ class App extends Component {
             });
         }
         .bind(that),
-        700
+        7000
       );
 
       setTimeout(
@@ -232,7 +231,7 @@ class App extends Component {
             });
         }
         .bind(that),
-        800
+        8000
       );
       setTimeout(
         function() {
@@ -243,7 +242,7 @@ class App extends Component {
             });
         }
         .bind(that),
-        900
+        9000
       );
       setTimeout(
         function() {
@@ -253,7 +252,7 @@ class App extends Component {
             });
         }
         .bind(that),
-        1000
+        10000
       );
     })
     this.state.socket.on('sendResultRound', function(opponentAction, idOpponentAction, opponentSpeed, newPokemon, friendAction, idFriendAction, friendSpeed, newStatsOpponent, newStatsFriend){
