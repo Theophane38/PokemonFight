@@ -6,7 +6,7 @@ var con = mysql.createConnection({
 	host: "localhost",
 	user: "root",
 	password: "",
-	database: "pokemons"
+	database: "database"
 });
 
 var allPokemons = []
